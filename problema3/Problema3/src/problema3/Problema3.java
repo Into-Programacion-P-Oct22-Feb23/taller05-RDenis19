@@ -38,7 +38,7 @@ public class Problema3 {
 
         valorPagar = costo;
 
-        if (origen.equals("Alemania")) {
+        if (origen.equals ("Alemania")) {
             impuestoPagar = (valorPagar * 20) / 100;
             valorPagar = valorPagar + impuestoPagar;
         } else if (origen.equals("Japón")) {
