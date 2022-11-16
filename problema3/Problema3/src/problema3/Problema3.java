@@ -24,36 +24,37 @@ public class Problema3 {
         String marca;
         String origen;
         double costo;
-        double impuestoPagar;
-        double valorPagar;
+        double impuestoPagar = 0;
+        double precioVenta = 0;
 
-        System.out.println("Ingrese la marca de su automovil:");
+        System.out.println("Ingrese la marca del vehiculo");
         marca = entrada.nextLine();
 
-        System.out.println("Ingrese el país de origen de su automovil:");
+        System.out.println("Ingrese el país de origen");
         origen = entrada.nextLine();
 
-        System.out.println("Ingrese el costo del automovil:");
+        System.out.println("Ingrese el costo del vehículo");
         costo = entrada.nextDouble();
 
-        valorPagar = costo;
-
-        if (origen.equals ("Alemania")) {
-            impuestoPagar = (valorPagar * 20) / 100;
-            valorPagar = valorPagar + impuestoPagar;
-        } else if (origen.equals("Japón")) {
-            impuestoPagar = (valorPagar * 30) / 100;
-            valorPagar = valorPagar + impuestoPagar;
+        if (origen.equals("Alemania")) {
+            impuestoPagar = (costo * 20) / 100;
+            precioVenta = costo + impuestoPagar;
+        } else if (origen.equals("Japon")) {
+            impuestoPagar = (costo * 30) / 100;
+            precioVenta = costo + impuestoPagar;
         } else if (origen.equals("Italia")) {
-            impuestoPagar = (valorPagar * 15) / 100;
-            valorPagar = valorPagar + impuestoPagar;
-        } else if (origen.equals("Estados Unidos")) {
-            impuestoPagar = (valorPagar * 8) / 100;
-            valorPagar = valorPagar + impuestoPagar;
+            impuestoPagar = (costo * 15) / 100;
+            precioVenta = costo + impuestoPagar;
+        } else if (origen.equals("Usa")) {
+            impuestoPagar = (costo * 8) / 100;
+            precioVenta = costo + impuestoPagar;
         }
-        System.out.printf("\nLa marca del utomovil es %s\nEl país de origen %s\n"
-                + "El automovil tiene un costo mas impuestos de: %.2f dolares.\n",
-                 marca, origen, valorPagar);
+        System.out.println("-----------------------------");
+        System.out.printf("La marca del vehículo es:\n%s\nEl país de "
+                + "origen es:\n%s\nEl costo de impuesto por pagar es:\n%.2f\n"
+                + "El precio de venta del vehiculo incluido el impuesto es:"
+                + "\n%s\n", marca, origen, impuestoPagar,
+                precioVenta);
     }
 
 }
