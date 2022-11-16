@@ -19,15 +19,16 @@ public class Problema2 {
         
         Scanner entrada = new Scanner (System.in);
         entrada.useLocale(Locale.US);
-         
-        double descripcionArticulo; 
+        
+        
+        String descripcionArticulo; 
         int cantidad;
         double precioUnitario;
         double descuento = 15; 
         double valorPagar;
         
         System.out.println("Ingrese la descripcion del Articulo");
-        descripcionArticulo = entrada.nextDouble();
+        descripcionArticulo = entrada.nextLine();
         
         System.out.println("Ingrese la cantidad");
         cantidad = entrada.nextInt();
